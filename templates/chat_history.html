@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat History</title>
+</head>
+<body>
+
+<h1>Chat History</h1>
+
+{% for message in messages %}
+
+<hr>
+
+<h3>Question</h3>
+
+<p>
+    {{ message.question }}
+</p>
+
+<h3>Answer</h3>
+
+<p>
+    {{ message.answer }}
+</p>
+
+<p>
+    {{ message.created_at }}
+</p>
+
+{% empty %}
+
+<p>No chat history found.</p>
+
+{% endfor %}
+
+</body>
+</html>

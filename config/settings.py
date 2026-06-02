@@ -44,6 +44,19 @@ INSTALLED_APPS = [
     'chatbot',
     'career',
 
+   'roadmaps',
+
+'study_planner',
+
+'resume_builder',
+
+'interview_coach',
+
+ 'learning_hub',
+
+'study_buddy',
+
+'scholarships',
 
 
 ]
@@ -75,10 +88,29 @@ TEMPLATES = [
     },
 ]
 
+
+
+
+LOGIN_URL = 'login'
+
+LOGIN_REDIRECT_URL = 'dashboard'
+
+LOGOUT_REDIRECT_URL = 'home'
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+
+
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+
+
+OPENAI_API_KEY = "your-api-key-here"
 
 
 

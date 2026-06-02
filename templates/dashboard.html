@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dashboard</title>
 </head>
 <body>
+
+<h1>Welcome to EduPilot AI Dashboard</h1>
+
+<p>Hello {{ request.user.username }}</p>
+
+
+<a href="{% url 'create_profile' %}">
+    Create Profile
+</a>
+
+<a href="{% url 'career_guidance' %}">
+    Career Guidance
+</a>
+
+<a href="{% url 'chat' %}">
+    AI Chat
+</a>
+
+<a href="{% url 'roadmap' %}">
+    Generate Roadmap
+</a>
+
+<a href="{% url 'study_plan' %}">
+    Study Planner
+</a>
+
+<a href="{% url 'resume_builder' %}">
+    Resume Builder
+</a>
+
+
+<a href="{% url 'learning_hub' %}">
+    Learning Hub
+</a>
+
+<a href="{% url 'study_planner' %}">
+    Learning Hub
+</a>
+
+<a href="{% url 'logout' %}">
+    Logout
+</a>
 
 </body>
 </html>

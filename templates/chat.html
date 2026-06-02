@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>EduPilot AI Chat</title>
 </head>
 <body>
+
+<h1>AI Student Mentor</h1>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <textarea
+        name="question"
+        rows="5"
+        cols="60"
+        placeholder="Ask anything..."
+    ></textarea>
+
+    <br><br>
+
+    <button type="submit">
+        Ask AI
+    </button>
+
+</form>
+
+<a href="{% url 'chat_history' %}">
+    View Chat History
+</a>
+
+
+
+<hr>
+
+<h2>Response</h2>
+
+<p>{{ answer }}</p>
 
 </body>
 </html>

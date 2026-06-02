@@ -1,0 +1,25 @@
+<h1>Interview Coach</h1>
+
+<h2>{{ question }}</h2>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">
+        Submit Answer
+    </button>
+
+</form>
+
+<hr>
+
+<h3>Score</h3>
+
+<p>{{ score }}/10</p>
+
+<h3>Feedback</h3>
+
+<p>{{ feedback }}</p>

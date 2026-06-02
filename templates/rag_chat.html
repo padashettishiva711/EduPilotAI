@@ -1,0 +1,25 @@
+<h1>RAG Chat</h1>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <textarea
+        name="question"
+        rows="5"
+        cols="60"
+    ></textarea>
+
+    <br>
+
+    <button type="submit">
+        Ask
+    </button>
+
+</form>
+
+<hr>
+
+<pre>
+{{ answer }}
+</pre>
